@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tests.TestChargingFragment">
+
+    <TextView
+        android:id="@+id/tvTestChargingTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:text="@string/charging"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCharging1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/ivCharging"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:contentDescription="@string/imageview"
+        app:layout_constraintBottom_toTopOf="@+id/tvIsCharging"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCharging3"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCharging2"
+        app:layout_constraintTop_toTopOf="@+id/guidelineCharging1"
+        app:srcCompat="@drawable/charging" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCharging2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCharging3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <TextView
+        android:id="@+id/tvIsCharging"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvTestLevelLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCharging3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCharging2" />
+
+    <Button
+        android:id="@+id/btChargingYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btChargingNo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btChargingNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/no"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btChargingYes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btChargingYes"
+        app:layout_constraintTop_toTopOf="@+id/btChargingYes" />
+
+    <TextView
+        android:id="@+id/tvIsChargingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/is_it_charging"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btChargingYes"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCharging3"
+        app:layout_constraintStart_toStartOf="@+id/guidelineCharging2" />
+
+    <TextView
+        android:id="@+id/tvTestPowerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/power"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvIsChargingLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvTestPower"
+        app:layout_constraintStart_toEndOf="@id/guidelineCharging2" />
+
+    <TextView
+        android:id="@+id/tvTestPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTestPowerLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCharging3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTestPowerLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTestPowerLabel" />
+
+    <TextView
+        android:id="@+id/tvTestCurrentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/current"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTestPowerLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTestPowerLabel" />
+
+    <TextView
+        android:id="@+id/tvTestCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTestCurrentLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTestPower"
+        app:layout_constraintTop_toTopOf="@+id/tvTestCurrentLabel" />
+
+    <TextView
+        android:id="@+id/tvTestVoltageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/voltage"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTestCurrentLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTestCurrentLabel" />
+
+    <TextView
+        android:id="@+id/tvTestVoltage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTestVoltageLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTestCurrent"
+        app:layout_constraintTop_toTopOf="@+id/tvTestVoltageLabel" />
+
+    <TextView
+        android:id="@+id/tvTestTemperatureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/temperature"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTestVoltageLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTestVoltageLabel" />
+
+    <TextView
+        android:id="@+id/tvTestTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTestTemperatureLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTestVoltage"
+        app:layout_constraintTop_toTopOf="@+id/tvTestTemperatureLabel" />
+
+    <TextView
+        android:id="@+id/tvTestLevelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/level"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTestTemperatureLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTestTemperatureLabel" />
+
+    <TextView
+        android:id="@+id/tvTestLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTestLevelLabel"
+        app:layout_constraintStart_toStartOf="@+id/tvTestTemperature"
+        app:layout_constraintTop_toTopOf="@+id/tvTestLevelLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

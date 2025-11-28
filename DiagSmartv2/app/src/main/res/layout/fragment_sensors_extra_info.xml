@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sensors.SensorsExtraInfoFragment">
+
+    <TextView
+        android:id="@+id/tvSensorNameExtra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        android:padding="8dp"
+        android:paddingStart="20dp"
+        android:text="@string/sensors"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tvSensorNameII"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvSensorNameExtra"
+        app:layout_constraintStart_toStartOf="@+id/tvSensorNameExtra"
+        app:layout_constraintTop_toBottomOf="@+id/tvSensorNameExtra" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/material_dynamic_neutral70"
+        app:layout_constraintEnd_toEndOf="@+id/tvSensorNameII"
+        app:layout_constraintStart_toStartOf="@+id/tvSensorNameII"
+        app:layout_constraintTop_toBottomOf="@+id/tvSensorNameII" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutSensors"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_layouts_lightgrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator">
+
+        <TextView
+            android:id="@+id/tvVendorIILabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/vendor"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSensorVendorII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvVendorIILabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorTypeII"
+            app:layout_constraintTop_toTopOf="@+id/tvVendorIILabel" />
+
+        <TextView
+            android:id="@+id/tvTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/type"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvVendorIILabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvVendorIILabel" />
+
+        <TextView
+            android:id="@+id/tvSensorsPowerLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/power"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvTypeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvTypeLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorsResolutionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/resolution"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorsPowerLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvSensorsPowerLabel" />
+
+        <TextView
+            android:id="@+id/tvMaxRangeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/maximum_range"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorsResolutionLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvSensorsResolutionLabel" />
+
+        <TextView
+            android:id="@+id/tvWakeupSensorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/wakeup_sensor"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tvMaxRangeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaxRangeLabel" />
+
+        <TextView
+            android:id="@+id/tvDynamicSensorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/dynamic_sensor"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvWakeupSensorLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvWakeupSensorLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorMaxRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMaxRangeLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvMaxRangeLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvMaxRangeLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorTypeII"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTypeLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorPower"
+            app:layout_constraintTop_toTopOf="@+id/tvTypeLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSensorsPowerLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorResolution"
+            app:layout_constraintTop_toTopOf="@+id/tvSensorsPowerLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorResolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSensorsResolutionLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorMaxRange"
+            app:layout_constraintTop_toTopOf="@+id/tvSensorsResolutionLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorWakeup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWakeupSensorLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorMaxRange"
+            app:layout_constraintTop_toTopOf="@+id/tvWakeupSensorLabel" />
+
+        <TextView
+            android:id="@+id/tvSensorDynamic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDynamicSensorLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvSensorWakeup"
+            app:layout_constraintTop_toTopOf="@+id/tvDynamicSensorLabel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
