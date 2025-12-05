@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tests.interactive.TestMicrophoneFragment">
+
+    <TextView
+        android:id="@+id/tvTestVolumeUpTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:text="@string/microphone"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btMicrophoneYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMicrophoneNo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btMicrophoneNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/no"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btMicrophoneYes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btMicrophoneYes"
+        app:layout_constraintTop_toTopOf="@+id/btMicrophoneYes" />
+
+    <TextView
+        android:id="@+id/tvMicrophoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/speak_to_the_microphone_is_the_progress_changing"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btMicrophoneYes"
+        app:layout_constraintEnd_toEndOf="@+id/btMicrophoneNo"
+        app:layout_constraintStart_toStartOf="@+id/btMicrophoneYes" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMicrophone1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMicrophone2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMicrophone3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <ImageView
+        android:id="@+id/ivMicrophone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:contentDescription="@string/imageview"
+        app:layout_constraintBottom_toTopOf="@id/view87"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMicrophone2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineMicrophone1"
+        app:layout_constraintTop_toTopOf="@+id/guidelineMicrophone3"
+        app:srcCompat="@drawable/microphone" />
+
+    <ProgressBar
+        android:id="@+id/pbMicrophone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvMicrophoneText"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMicrophone2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineMicrophone1"
+        app:layout_constraintTop_toBottomOf="@+id/ivMicrophone" />
+
+    <View
+        android:id="@+id/view87"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/pbMicrophone"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMicrophone2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineMicrophone1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

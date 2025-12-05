@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tests.interactive.TestDisplayMainFragment">
+
+    <TextView
+        android:id="@+id/tvDisplayTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:text="@string/display"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/ivDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/imageview"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisplayCheckText"
+        app:layout_constraintEnd_toEndOf="@+id/tvDisplayCheckText"
+        app:layout_constraintStart_toStartOf="@+id/tvDisplayCheckText"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplayTitle"
+        app:srcCompat="@drawable/display" />
+
+    <Button
+        android:id="@+id/btDisplayNextMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/mainGreen"
+        android:onClick="launchTest"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDisplayCheckText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:maxLines="4"
+        android:text="@string/display_may_turn_black_white_red_green_and_blue_look_for_different_colored_pixels_and_tap_to_continue"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btDisplayNextMain"
+        app:layout_constraintEnd_toStartOf="@id/guidelineFlash2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineFlash1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFlash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFlash2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

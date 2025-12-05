@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CpuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutGoogleTensor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivCpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/image_google_tensor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/googletensor" />
+
+        <TextView
+            android:id="@+id/tvGogleTensorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="@string/google_tensor"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/ivCpu"
+            app:layout_constraintTop_toTopOf="@+id/ivCpu" />
+
+        <TextView
+            android:id="@+id/tvCortex"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:maxLines="3"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/tvSocInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvGogleTensorLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvGogleTensorLabel" />
+
+        <TextView
+            android:id="@+id/tvSocInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvGogleTensorLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewCpu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGoogleTensor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_layouts_lightgrey"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvProcessorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/processor"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvProcessor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view34"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCPUArquitectureLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_architecture"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCPUArchitecture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="3"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view35"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvSupportedABIsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/supported_abis"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSupportedABIs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view36"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCPUHardwareLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_hardware"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCPUHardware"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view37"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCPUTypeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_type"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCPUType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view38"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCPUGovernorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_governor"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCPUGovernor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view39"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCoresLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cores"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view40"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvCPUFrequencyLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpu_frequency"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCPUFrequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="3"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view41"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvGPURendererLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/gpu_renderer"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvGPURenderer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view42"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvGPUVendorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/gpu_vendor"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvGPUVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/secondaryGreen" />
+
+            <View
+                android:id="@+id/view43"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/material_dynamic_neutral70" />
+
+            <TextView
+                android:id="@+id/tvGPUVersionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/gpu_version"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvGPUVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:maxLines="3"
+                android:textColor="@color/secondaryGreen" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

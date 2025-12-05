@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tests.interactive.TestDisplayColorCheckFragment">
+
+    <TextView
+        android:id="@+id/tvDisplayTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/shape_menu_textviews"
+        android:padding="8dp"
+        android:paddingStart="16dp"
+        android:text="@string/display"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:id="@+id/ivDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/imageview"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisplayCheckText"
+        app:layout_constraintEnd_toEndOf="@+id/tvDisplayCheckText"
+        app:layout_constraintStart_toStartOf="@+id/tvDisplayCheckText"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplayTitle"
+        app:srcCompat="@drawable/display" />
+
+    <TextView
+        android:id="@+id/tvDisplayCheckText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:maxLines="4"
+        android:text="@string/were_the_screen_one_solid_color"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btDisplayYes"
+        app:layout_constraintEnd_toStartOf="@id/guidelineFlash2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineFlash1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFlash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineFlash2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <Button
+        android:id="@+id/btDisplayYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btDisplayNo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btDisplayNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/mainGreen"
+        android:text="@string/no"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/btDisplayYes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btDisplayYes"
+        app:layout_constraintTop_toTopOf="@+id/btDisplayYes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
